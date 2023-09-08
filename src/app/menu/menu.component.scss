@@ -1,0 +1,31 @@
+menu {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    height: 80px;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 120px;
+    padding-right: 120px;
+
+    a {
+        text-decoration: none;
+        color: rgba(97, 136, 253, 1);
+        margin-left: 32px;
+        font-weight: 600;
+        font-size: 32px;
+
+        &:hover {
+            color: rgba(97, 136, 253, 1);
+            font-weight: 600;
+        }
+    }
+
+    img {
+        cursor: pointer;
+        height: 50px;
+    }
+}
