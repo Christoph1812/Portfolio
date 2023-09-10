@@ -1,31 +1,26 @@
 menu {
+    padding-left: 50px;
+    padding-right: 50px;
+    margin: 0;
     position: absolute;
     left: 0;
     right: 0;
     top: 0;
     height: 80px;
     z-index: 1;
-    display: flex;
     align-items: center;
+    display: flex;
     justify-content: space-between;
-    padding-left: 120px;
-    padding-right: 120px;
 
-    a {
-        text-decoration: none;
-        color: rgba(97, 136, 253, 1);
-        margin-left: 32px;
-        font-weight: 600;
-        font-size: 32px;
 
-        &:hover {
-            color: rgba(97, 136, 253, 1);
-            font-weight: 600;
-        }
+    .logo {
+        cursor: pointer;
+        height: 120px;
+        width: 170px;
     }
 
-    img {
+    .burger-menu {
         cursor: pointer;
-        height: 50px;
+        width: 30px
     }
 }
