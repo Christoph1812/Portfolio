@@ -1,6 +1,6 @@
 menu {
-    padding-left: 50px;
-    padding-right: 50px;
+    padding-left: 20px;
+    padding-right: 20px;
     margin: 0;
     position: absolute;
     left: 0;
@@ -15,8 +15,9 @@ menu {
 
     .logo {
         cursor: pointer;
-        height: 120px;
-        width: 170px;
+        height: 80px;
+        width: 80px;
+        object-fit: contain;
     }
 
     .burger-menu {
