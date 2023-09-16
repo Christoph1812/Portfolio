@@ -6,17 +6,17 @@
 
 
     .blue-bubble-1 {
-        width: 612px;
-        height: 612px;
+        width: 625px;
+        height: 625px;
         margin-left: -240px;
         margin-top: -22px;
     }
 
     .blue-bubble-2 {
         position: absolute;
+        bottom: -78px;
+        left: 50%;
         width: 156px;
-        left: 107px;
-        top: 100%;
         z-index: 3;
     }
 }
@@ -25,26 +25,46 @@
 
 .hero-container {
     position: absolute;
-    margin-left: 20px;
+    height: 100%;
+    width: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
-
-    p {
-        font-family: "Montserrat";
-    }
-
-    h1 {
-        font-family: "Baloo 2";
-    }
-
-
-
 
 
     .profile-image {
+        position: absolute;
+        bottom: 0;
+        height: 55vh;
+        width: 390px;
         object-fit: contain;
-        height: 65vh;
+    }
+
+    .headline {
+        margin-top: 125px;
+        margin-left: 20px;
+        display: flex;
+        flex-direction: column;
+        height: 205px;
+        line-height: 60px;
+
+        p {
+            margin: 0px;
+            margin-bottom: 0px;
+            font-size: 30px;
+            color: white;
+        }
+
+        h1 {
+            margin: 0;
+            color: white;
+            font-size: 73px;
+
+        }
+
+        h1:nth-child(3) {
+            font-size: 67px;
+
+        }
 
     }
 
