@@ -1,4 +1,43 @@
 .about-me-section {
-    height: 500px;
-    background-color: black;
+    height: 1000px;
+    background-color: white;
+
+    .blue-bubble-3 {
+        position: absolute;
+        left: 80%;
+        top: calc(100vh + 100px);
+        margin-right: 20px;
+        width: 60px;
+        height: 60px;
+    }
+
+
+}
+
+
+.about-me-content {
+    margin-top: 150px;
+    margin-left: 20px;
+
+
+    h2 {
+        color: var(--blue);
+        font-size: 64px;
+        margin: 0;
+        line-height: 80px;
+    }
+
+    p {
+        font-size: 23px;
+        line-height: 27px;
+    }
+
+    .blue-button {
+        font-size: 23px;
+        padding: 15px 30px;
+        border: 2px solid var(--blue);
+        color: var(--blue);
+        border-radius: 10px;
+
+    }
 }
