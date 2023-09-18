@@ -1,4 +1,48 @@
-.skills-section {
-    height: 200px;
-    background-image: linear-gradient(to right, var(--headlineColor) 0%, rgb(89, 136, 255) 50%, rgb(0, 67, 240))
+.skill-section {
+    height: 2000px;
+    background-image: linear-gradient(to right, var(--headlineColor) 0%, rgb(89, 136, 255) 50%, rgb(0, 67, 240));
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    h2 {
+        color: white;
+        font-size: 64px;
+    }
+
+    .skill-icons {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 70px;
+        width: calc(100% - 40px);
+
+        div {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 70px;
+            height: 70px;
+
+        }
+
+        img {
+            width: 60px;
+            height: 60px;
+            object-fit: contain;
+        }
+
+        p {
+            color: white;
+            font-size: 14px;
+            text-align: center;
+        }
+
+
+    }
+
+
+
+
+
 }
