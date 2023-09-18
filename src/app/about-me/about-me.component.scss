@@ -1,6 +1,6 @@
 .about-me-section {
-    height: 1000px;
     background-color: white;
+
 
     .blue-bubble-3 {
         position: absolute;
@@ -17,14 +17,16 @@
 
 .about-me-content {
     margin-top: 150px;
+    margin-bottom: 50px;
     margin-left: 20px;
+    margin-right: 20px;
 
 
     h2 {
-        color: var(--blue);
+        color: var(--headlineColor);
         font-size: 64px;
         margin: 0;
-        line-height: 80px;
+        line-height: 60px;
     }
 
     p {
@@ -32,11 +34,18 @@
         line-height: 27px;
     }
 
+
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+
     .blue-button {
         font-size: 23px;
         padding: 15px 30px;
-        border: 2px solid var(--blue);
-        color: var(--blue);
+        border: 2px solid var(--headlineColor);
+        color: var(--headlineColor);
         border-radius: 10px;
 
     }
