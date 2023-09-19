@@ -1,0 +1,22 @@
+[
+    {
+        "title": "Join",
+        "technologies": "JavaScript | HTML | CSS ",
+        "description": "Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories. "
+    },
+    {
+        "title": "Sharkie",
+        "technologies": "JavaScript | HTML | CSS ",
+        "description": "A 2D adventure game based on an object-oriented approach. Help Sharkie find coins and poison bottles to fight against the big whales."
+    },
+    {
+        "title": "CRM",
+        "technologies": "Angular | TypeScript | HTML | CSS | Firebase ",
+        "description": "A very Simple Customer Relationship Managment system working with CRUD functionallity. "
+    },
+    {
+        "title": "DaBubble",
+        "technologies": "Angular | TypeScript | HTML | CSS | Firebase ",
+        "description": "Chatclone"
+    }
+]

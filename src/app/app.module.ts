@@ -14,6 +14,8 @@ import { MenuOverlayComponent } from './menu-overlay/menu-overlay.component';
 import { MainPageComponent } from './main-page/main-page.component';
 import { HeroComponent } from './hero/hero.component';
 import { SkillsComponent } from './skills/skills.component';
+import { ProjectComponent } from './project/project.component';
+import { ProjectService } from './services/project.service';
 
 @NgModule({
   declarations: [
@@ -28,13 +30,14 @@ import { SkillsComponent } from './skills/skills.component';
     MenuOverlayComponent,
     MainPageComponent,
     HeroComponent,
-    SkillsComponent
+    SkillsComponent,
+    ProjectComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [ProjectService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
