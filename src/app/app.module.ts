@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MenuComponent } from './menu/menu.component';
@@ -16,6 +15,8 @@ import { HeroComponent } from './hero/hero.component';
 import { SkillsComponent } from './skills/skills.component';
 import { ProjectComponent } from './project/project.component';
 import { ProjectService } from './services/project.service';
+import { HttpClientModule } from '@angular/common/http';
+
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import { ProjectService } from './services/project.service';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [ProjectService],
   bootstrap: [AppComponent]

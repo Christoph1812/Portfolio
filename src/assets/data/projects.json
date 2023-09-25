@@ -2,21 +2,25 @@
     {
         "title": "Join",
         "technologies": "JavaScript | HTML | CSS ",
-        "description": "Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories. "
+        "description": "Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.",
+        "imagePath": "/assets/img/join.JPG"
     },
     {
         "title": "Sharkie",
         "technologies": "JavaScript | HTML | CSS ",
-        "description": "A 2D adventure game based on an object-oriented approach. Help Sharkie find coins and poison bottles to fight against the big whales."
+        "description": "A 2D adventure game based on an object-oriented approach. Help Sharkie find coins and poison bottles to fight against the big whales.",
+        "imagePath": "/assets/img/sharkie.JPG"
     },
     {
         "title": "CRM",
         "technologies": "Angular | TypeScript | HTML | CSS | Firebase ",
-        "description": "A very Simple Customer Relationship Managment system working with CRUD functionallity. "
+        "description": "A very Simple Customer Relationship Managment system working with CRUD functionallity.",
+        "imagePath": "/assets/img/sharkie.JPG"
     },
     {
         "title": "DaBubble",
         "technologies": "Angular | TypeScript | HTML | CSS | Firebase ",
-        "description": "Chatclone"
+        "description": "Chatclone",
+        "imagePath": "/assets/img/sharkie.JPG"
     }
 ]
