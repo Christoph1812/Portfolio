@@ -1,8 +1,10 @@
 <div class="project" *ngFor="let project of projects">
     <img [src]="project.imagePath" alt="{{ project.title }}" />
-    <h3>{{ project.title }}</h3>
-    <p>{{ project.technologies }}</p>
-    <p>{{ project.description }}</p>
+    <div class="text-content">
+        <h3>{{ project.title }}</h3>
+        <p class="technologies">{{ project.technologies }}</p>
+        <p class="description">{{ project.description }}</p>
+    </div>
     <div class="my-work-button">
         <button class="blue-button">Live test</button>
         <button class="blue-button">Github</button>
