@@ -8,20 +8,24 @@ import { Component, ElementRef, ViewChild } from '@angular/core';
 export class ContactComponent {
   @ViewChild('myForm') myForm!: ElementRef;
   @ViewChild('nameField') nameField!: ElementRef;
+  @ViewChild('emailField') emailField!: ElementRef;
   @ViewChild('messageField') messageField!: ElementRef;
 
   async sendMail() {
 
     let nameField = this.nameField.nativeElement;
     let messageField = this.messageField.nativeElement;
+    let emailField = this.emailField.nativeElement;
     let sendButton = this.myForm.nativeElement;
     nameField.disabled = true;
+    emailField.disabled = true;
     messageField.disabled = true;
     sendButton.disabled = true;
     //Animation triggern
 
     let fd = new FormData();
     fd.append('name', nameField.value);
+    fd.append('email', emailField.value);
     fd.append('message', messageField.value);
 
     // senden
@@ -34,6 +38,7 @@ export class ContactComponent {
 
     // Text anzeigen: Nachricht gesendet.
     nameField.disabled = false;
+    emailField.disabled = false;
     messageField.disabled = false;
     sendButton.disabled = false;
 
