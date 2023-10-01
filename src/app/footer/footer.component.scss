@@ -1,0 +1,19 @@
+.footer-container {
+    background-image: linear-gradient(to right, var(--headlineColor) 0%, rgb(89, 136, 255) 50%, rgb(0, 67, 240));
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+
+    .logo {
+        height: 80px;
+        width: 80px;
+        object-fit: contain;
+    }
+
+    a {
+        text-decoration: none;
+        color: white;
+
+    }
+}
