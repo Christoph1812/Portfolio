@@ -5,9 +5,19 @@
         with my work.</p>
     <p>Need a Frontend developer? Contact me!</p>
 </div>
-<form (submit)="sendMail()" #myForm>
+<!-- <form (submit)="sendMail()" #myForm>
     <input typ="text" name="name" #nameField>
     <input type="text" name="email" #emailField>
-    <input type="text">
+    <textarea type="text" name="message" #messageField></textarea>
     <button class="blue-button" #sendButton>Say hello ;)</button>
+</form> -->
+<form [formGroup]="myForm" (ngSubmit)="sendMail()">
+    <input type="text" name="name" formControlName="name" required>
+    <input type="email" name="email" formControlName="email" required>
+    <textarea name="message" formControlName="message" required></textarea>
+    <div class="privacy-checkbox">
+        <input type="checkbox" formControlName="privacyPolicy" required>
+        <label for="privacyPolicy">Ich habe die Datenschutzerklärung gelesen und akzeptiere sie.</label>
+    </div>
+    <button type="submit" class="blue-button" [disabled]="myForm.invalid">Say hello ;)</button>
 </form>
