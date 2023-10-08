@@ -3,9 +3,8 @@
     <p>Got a problem to solve?</p>
     <p>Contact me though this form, I am interested in hearing you, knowing your ideas and contributing to your projects
         with my work.</p>
-    <p>Need a Frontend developer? Contact me!</p>
+    <p>Need a Frontend developer? <span>Contact me!</span></p>
 </div>
-
 
 <form [formGroup]="contactForm" (ngSubmit)="sendMail()">
     <div class="input-container">
@@ -71,36 +70,19 @@
             </ng-container>
         </ng-container>
     </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <input type="checkbox" formControlName="privacyPolicy" required>
+    <div class="privacy-policy-container">
+        <input type="checkbox" formControlName="privacyPolicy" required>
+        <p>I've read the
+            <a routerLink="/privacy-policy"><span class="privacy-policy">privacy-policy</span></a>
+            and agree to the processing of my data as
+            outlined.
+        </p>
+    </div>
     <ng-container *ngIf="contactForm.controls['privacyPolicy'] as privacyPolicy">
         <ng-container *ngIf="privacyPolicy.dirty|| privacyPolicy.touched">
             <ng-container *ngIf="privacyPolicy.errors as errors">
                 <p class="error" *ngIf="errors['required']">
-                    A privacyPolicy must be entered.
-                </p>
-                <p class="error" *ngIf="errors['minlength']">
-                    At least {{errors['minlength'].requiredLength}} letters should be entered.
+                    Please accept the privacy privacy policy.
                 </p>
             </ng-container>
         </ng-container>
