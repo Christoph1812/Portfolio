@@ -7,14 +7,14 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
   styleUrls: ['./contact.component.scss']
 })
 export class ContactComponent implements OnInit {
-  myForm!: FormGroup;
+  contactForm!: FormGroup;
 
   constructor(private fb: FormBuilder) {
   }
 
   ngOnInit() {
-    this.myForm = this.fb.group({
-      name: ['', Validators.required],
+    this.contactForm = this.fb.group({
+      name: ['', [Validators.required, Validators.minLength(5)]],
       email: ['', [Validators.required, Validators.email]],
       message: ['', Validators.required],
       privacyPolicy: [false, Validators.requiredTrue]
@@ -22,27 +22,24 @@ export class ContactComponent implements OnInit {
   }
 
   async sendMail() {
-    if (this.myForm.valid){
-      const formData = {
-        name: this.myForm.get('name')!.value,
-        email: this.myForm.get('email')!.value,
-        message: this.myForm.get('message')!.value
-      };
+    if (this.contactForm.valid){
+      const formData = new FormData();
+      formData.append('name', this.contactForm.get('name')!.value);
+      formData.append('email', this.contactForm.get('email')!.value);
+      formData.append('message', this.contactForm.get('message')!.value);
+
 
     // Server-Anfrage senden
     await fetch('https://christoph-haase.developerakademie.net/send_mail/send_mail.php', {
       method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify(formData) // Formulardaten als JSON-String senden
+      body: formData
     });
      
       alert('Nachricht wurde gesendet!');
-      this.myForm.reset();
+      this.contactForm.reset();
     } else {
       // Markiere die Formularfelder als berührt, um Fehlermeldungen anzuzeigen
-      this.myForm.markAllAsTouched();
+      this.contactForm.markAllAsTouched();
     }
   }
 }

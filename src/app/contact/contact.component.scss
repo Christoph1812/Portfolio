@@ -4,12 +4,84 @@ form {
     align-items: center;
     gap: 28px;
 
-    input {
-        height: 40px;
-        width: calc(100% - 40px);
-        margin: 0px 20px;
-        border: 2px solid var(--headlineColor);
-        border-radius: 10px;
+
+
+    .input-container {
+        position: relative;
+        width: 100%;
+
+        input {
+            padding-left: 10px;
+            height: 40px;
+            width: calc(100% - 50px);
+            margin: 0px 20px;
+            border: 1px solid var(--headlineColor);
+            border-radius: 10px;
+
+            &:hover {
+                border: 2px solid var(--headlineColor);
+            }
+        }
 
     }
+
+
+    .textarea-container {
+        position: relative;
+        width: 100%;
+
+        textarea {
+            padding-left: 10px;
+            padding-right: 48px;
+            padding-top: 10px;
+            height: calc(160px - 20px);
+            width: calc(100% - 50px - 48px);
+            margin: 0px 20px;
+            border: 1px solid var(--headlineColor);
+            border-radius: 10px;
+            resize: none;
+
+            &:hover {
+                border: 2px solid var(--headlineColor);
+            }
+        }
+
+
+
+    }
+
+    .placeholder {
+        position: absolute;
+        top: 20px;
+        left: 30px;
+        font-size: 16px;
+        transform: translateY(-50%);
+        pointer-events: none;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .placeholder.active {
+        top: 10px;
+        left: 30px;
+        transform: translateY(-100%) scale(0.8);
+        background-color: #fff;
+        /* Optional: Hintergrundfarbe ändern */
+        // padding: 0 5px;
+        // /* Optional: Fügen Sie Platz für den Text hinzu */
+    }
+
+
+
+    .check-icon {
+        position: absolute;
+        top: 9px;
+        right: 22px;
+    }
+
+    .error {
+        margin-left: 20px;
+        color: red;
+    }
+
+
 }

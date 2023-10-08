@@ -5,19 +5,107 @@
         with my work.</p>
     <p>Need a Frontend developer? Contact me!</p>
 </div>
-<!-- <form (submit)="sendMail()" #myForm>
-    <input typ="text" name="name" #nameField>
-    <input type="text" name="email" #emailField>
-    <textarea type="text" name="message" #messageField></textarea>
-    <button class="blue-button" #sendButton>Say hello ;)</button>
-</form> -->
-<form [formGroup]="myForm" (ngSubmit)="sendMail()">
-    <input type="text" name="name" formControlName="name" required>
-    <input type="email" name="email" formControlName="email" required>
-    <textarea name="message" formControlName="message" required></textarea>
-    <div class="privacy-checkbox">
-        <input type="checkbox" formControlName="privacyPolicy" required>
-        <label for="privacyPolicy">Ich habe die Datenschutzerklärung gelesen und akzeptiere sie.</label>
+
+
+<form [formGroup]="contactForm" (ngSubmit)="sendMail()">
+    <div class="input-container">
+        <input type="text" formControlName="name">
+        <label class="placeholder"
+            [class.active]="contactForm.get('name')!.touched || contactForm.get('name')!.dirty">Your name
+        </label>
+        <img class="check-icon" *ngIf="contactForm.controls['name'].valid" src="/assets/img/green-tick.svg" alt="Tick">
+
+        <ng-container *ngIf="contactForm.controls['name'] as name">
+            <ng-container *ngIf="name.dirty|| name.touched">
+                <ng-container *ngIf="name.errors as errors">
+                    <p class="error" *ngIf="errors['required']">
+                        A name must be entered.
+                    </p>
+                    <p class="error" *ngIf="errors['minlength']">
+                        At least {{errors['minlength'].requiredLength}} letters should be entered.
+                    </p>
+                    <img class="check-icon" *ngIf="errors['required'] || errors['minlength']"
+                        src="/assets/img/red-exclamation-mark.svg" alt="Exclamation Mark">
+                </ng-container>
+            </ng-container>
+        </ng-container>
     </div>
-    <button type="submit" class="blue-button" [disabled]="myForm.invalid">Say hello ;)</button>
+    <div class="input-container">
+        <input type="text" formControlName="email">
+        <label class="placeholder"
+            [class.active]="contactForm.get('email')!.touched || contactForm.get('email')!.dirty">Your email
+        </label>
+        <img class="check-icon" *ngIf="contactForm.controls['email'].valid" src="/assets/img/green-tick.svg" alt="Tick">
+
+        <ng-container *ngIf="contactForm.controls['email'] as email">
+            <ng-container *ngIf="email.dirty|| email.touched">
+                <ng-container *ngIf="email.errors as errors">
+                    <p class="error" *ngIf="errors['required']">
+                        A email must be entered.
+                    </p>
+                    <p class="error" *ngIf="errors['email']">
+                        This is not a valid email address.
+                    </p>
+                    <img class="check-icon" *ngIf="errors['email'] || errors['required']"
+                        src="/assets/img/red-exclamation-mark.svg" alt="Exclamation Mark">
+                </ng-container>
+            </ng-container>
+        </ng-container>
+    </div>
+    <div class="textarea-container">
+        <textarea type="textarea" formControlName="message"></textarea>
+        <label class="placeholder"
+            [class.active]="contactForm.get('message')!.touched || contactForm.get('message')!.dirty">Your message
+        </label>
+        <img class="check-icon" *ngIf="contactForm.controls['message'].valid" src="/assets/img/green-tick.svg"
+            alt="Tick">
+        <ng-container *ngIf="contactForm.controls['message'] as message">
+            <ng-container *ngIf="message.dirty|| message.touched">
+                <ng-container *ngIf="message.errors as errors">
+                    <p class="error" *ngIf="errors['required']">
+                        your message is empty
+                    </p>
+                    <img class="check-icon" *ngIf=" errors['required']" src="/assets/img/red-exclamation-mark.svg"
+                        alt="Exclamation Mark">
+                </ng-container>
+            </ng-container>
+        </ng-container>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <input type="checkbox" formControlName="privacyPolicy" required>
+    <ng-container *ngIf="contactForm.controls['privacyPolicy'] as privacyPolicy">
+        <ng-container *ngIf="privacyPolicy.dirty|| privacyPolicy.touched">
+            <ng-container *ngIf="privacyPolicy.errors as errors">
+                <p class="error" *ngIf="errors['required']">
+                    A privacyPolicy must be entered.
+                </p>
+                <p class="error" *ngIf="errors['minlength']">
+                    At least {{errors['minlength'].requiredLength}} letters should be entered.
+                </p>
+            </ng-container>
+        </ng-container>
+    </ng-container>
+    <button type="submit" class="blue-button" [disabled]="contactForm.invalid">Say hello ;)</button>
+
+
 </form>
