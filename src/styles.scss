@@ -1,6 +1,13 @@
 :root {
     --headlineColor: rgb(89, 136, 255);
+    //===Media Breakpoints===
+    --mobile: 500px;
+    --tablet: 800px;
+    --Desktop: 1200px;
+
 }
+
+$ligthBlue: rgb(89, 136, 255);
 
 * {
     margin: 0;
@@ -26,5 +33,21 @@ h1 {
     border: 2px solid var(--headlineColor);
     color: var(--headlineColor);
     border-radius: 10px;
+}
 
+body::-webkit-scrollbar {
+    width: 6px;
+}
+
+body::-webkit-scrollbar-track {
+    background: linear-gradient(to bottom, #EAF0FF, white, #5988FF);
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: #5988FF;
+    border-radius: 6px;
+}
+
+body::-webkit-scrollbar-thumb:hover {
+    background-color: #4A69D8;
 }

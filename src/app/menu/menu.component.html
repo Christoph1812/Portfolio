@@ -1,10 +1,34 @@
 <menu>
-    <img class="logo" src="/assets/img/personal-logo.png" alt="Logo">
-    <img class="burger-menu" src="/assets/img/burger-menu.svg" alt="Burger menu">
+    <a routerLink="/"><img class="logo" src="/assets/img/personal-logo.png" alt="Logo"></a>
 
-    <!-- <div>
+
+    <!-- <div class="menu-links">
         <a routerLink="">About me</a>
         <a routerLink="">Skills</a>
         <a routerLink="">My Work</a>
     </div> -->
+
+
+    <div class="menu-overlay">
+        <a routerLink="/"><img class="logo" src="/assets/img/personal-logo.png" alt="Logo"></a>
+        <a routerLink="">About me</a>
+        <a routerLink="">Skills</a>
+        <a routerLink="">My Work</a>
+        <a href="https://github.com/Christoph1812"><img src="/assets/img/social-medioa-icons/github-blue.svg"
+                alt="Github"></a>
+        <a href="mailto:kontakt@beispiel.com?subject=Anfrage%20f%C3%BCr%20Ihr%20Portfolio"><img
+                src="/assets/img/social-medioa-icons/email-blue.svg" alt="Email"></a>
+        <a href="https://de.linkedin.com/"><img src="/assets/img/social-medioa-icons/linkedin-blue.svg"
+                alt="Linkedin"></a>
+    </div>
+
+
+    <div class="burger-menu">
+        <div [class.active]="false" class="menu-line line1"></div>
+        <div [class.active]="false" class="menu-line line2"></div>
+        <div [class.active]="false" class="menu-line line3"></div>
+    </div>
+
+
+
 </menu>

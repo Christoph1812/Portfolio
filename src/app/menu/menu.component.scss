@@ -20,8 +20,42 @@ menu {
         object-fit: contain;
     }
 
+    $menu-width: 2.5rem;
+    $menu-height: .2rem;
+    $menu-color: var(--headlineColor);
+    $menu-gap: 1rem; // Gap between the lines
+
     .burger-menu {
+        width: $menu-width;
+        height: $menu-height * 3 + $menu-gap * 2; // 3 lines and 2 gaps
         cursor: pointer;
-        width: 30px
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin-right: 2.5rem;
+        overflow: hidden;
+        position: relative;
+        z-index: 6;
+
+        .menu-line {
+            border-radius: 2px;
+            width: $menu-width;
+            height: $menu-height;
+            background-color: $menu-color;
+            transition: transform 0.3s ease, opacity 0.3s ease;
+
+            &.line1.active {
+                transform: translateY($menu-height + $menu-gap) rotate(45deg);
+            }
+
+            &.line2.active {
+                opacity: 0;
+            }
+
+            &.line3.active {
+                transform: translateY(-$menu-height - $menu-gap) rotate(-45deg);
+            }
+        }
     }
+
 }
