@@ -8,4 +8,14 @@ import { Component } from '@angular/core';
 export class MenuComponent {
   showOverlay: any = false;
 
+  openMenu() {
+    this.showOverlay = !this.showOverlay;
+    if (this.showOverlay) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'auto';
+    }
+  }
 }
+
+

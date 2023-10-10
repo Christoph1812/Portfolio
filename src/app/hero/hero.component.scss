@@ -15,10 +15,24 @@
     .blue-bubble-2 {
         position: absolute;
         bottom: -78px;
-        left: 30%;
+        left: 50%;
         width: 156px;
         z-index: 3;
     }
+
+    .social-media {
+        display: none;
+    }
+
+
+}
+
+.scroll {
+
+    img {
+        fill: green;
+    }
+
 }
 
 
@@ -31,10 +45,10 @@
 
 
     .profile-image {
+        margin-left: 20px;
         position: absolute;
         bottom: 0;
-        height: 55vh;
-
+        height: 50vh;
         object-fit: contain;
     }
 
@@ -47,24 +61,31 @@
         line-height: 60px;
 
         p {
-            margin: 0px;
+
             margin-bottom: 0px;
-            font-size: 30px;
+            font-size: 20px;
             color: white;
         }
 
         h1 {
-            margin: 0;
             color: white;
-            font-size: 73px;
+            font-size: 60px;
 
         }
 
         h1:nth-child(3) {
-            font-size: 67px;
+            font-size: 55px;
 
         }
 
+
+
     }
+
+
+
+
+
+    @media(min-width: 800) {}
 
 }
