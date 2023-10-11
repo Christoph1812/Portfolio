@@ -39,12 +39,12 @@
             font-size: 14px;
             text-align: center;
         }
-
-
     }
+}
 
-
-
-
+@media(min-width: 800px) {
+    .skill-icons {
+        flex-wrap: nowrap;
+    }
 
 }

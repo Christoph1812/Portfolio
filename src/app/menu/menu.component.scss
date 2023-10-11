@@ -126,7 +126,7 @@ $menu-gap: 1rem; // Gap between the lines
     transform: scaleX(1);
 }
 
-@media (min-width: 800px) {
+@media (min-width: 700px) {
     menu {
         padding: 0;
         margin: 0px 80px;
@@ -142,4 +142,11 @@ $menu-gap: 1rem; // Gap between the lines
         display: none;
     }
 
+}
+
+@media(min-width: 1000px) {
+
+    .menu-links {
+        gap: 50px;
+    }
 }

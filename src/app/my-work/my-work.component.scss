@@ -1,4 +1,6 @@
 .my-work-section {
+    background-color: rgb(240, 238, 238);
+
     .blue-bubble-4 {
         width: 45px;
         height: 45px;
@@ -25,7 +27,7 @@
     margin-right: 20px;
 
     h2 {
-        color: var('$ligthBlue');
+        color: var(--headlineColor);
         font-size: 64px;
         margin: 0;
     }
