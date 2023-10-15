@@ -11,13 +11,21 @@ menu {
     display: flex;
     justify-content: space-between;
 
+}
 
-    .logo {
-        cursor: pointer;
-        height: 80px;
-        width: 80px;
-        object-fit: contain;
-    }
+.logo-container {
+    font-family: "Baloo 2";
+    color: white;
+    display: flex;
+    align-items: center;
+
+}
+
+.logo {
+    cursor: pointer;
+    height: 60px;
+    width: 60px;
+    object-fit: contain;
 }
 
 .menu-links {
@@ -144,7 +152,7 @@ $menu-gap: 1rem; // Gap between the lines
 
 }
 
-@media(min-width: 1000px) {
+@media(min-width: 1100px) {
 
     .menu-links {
         gap: 50px;

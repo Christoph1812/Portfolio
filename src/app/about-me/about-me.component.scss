@@ -5,7 +5,6 @@
         position: absolute;
         left: 80%;
         top: calc(100vh + 100px);
-        margin-right: 20px;
         width: 60px;
         height: 60px;
     }
@@ -13,8 +12,8 @@
 
 
 .about-me-content {
-    margin-top: 180px;
-    margin-bottom: 50px;
+    padding-top: 300px;
+    padding-bottom: 200px;
     margin-left: 20px;
     margin-right: 20px;
 
@@ -40,7 +39,10 @@
 .button-container {
     display: flex;
     justify-content: center;
+    height: 50px;
 }
+
+
 
 @media(min-width:1000px) {
     .about-me-content {

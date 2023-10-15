@@ -24,3 +24,19 @@
         color: white;
     }
 }
+
+@media(min-width:800px) {
+    .footer-container {
+        padding: 40px 80px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .copy-imprint {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+}

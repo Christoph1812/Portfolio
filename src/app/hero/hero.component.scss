@@ -94,8 +94,8 @@
 @media(min-width: 800px) {
     .hero-section {
         .blue-bubble-1 {
-            width: 800px;
-            height: 800px;
+            width: 700px;
+            height: 700px;
             margin-left: -310px;
             margin-top: -130px;
         }
@@ -112,17 +112,17 @@
             margin-left: 80px;
 
             p {
-                font-size: 25px;
+                font-size: 20px;
             }
 
             h1 {
                 color: white;
-                font-size: 75px;
+                font-size: 70px;
 
             }
 
             h1:nth-child(3) {
-                font-size: 68px;
+                font-size: 58px;
 
             }
         }
@@ -130,10 +130,11 @@
 
     .social-media {
         display: flex;
+
     }
 }
 
-@media(min-width: 1000px) {
+@media(min-width: 1100px) {
     .hero-container {
         flex-direction: row-reverse;
         justify-content: space-between;
@@ -173,7 +174,7 @@
     }
 }
 
-@media(min-width: 1300px) {
+@media(min-width: 1400px) {
     .hero-container {
         .headline {
             margin-left: 180px;

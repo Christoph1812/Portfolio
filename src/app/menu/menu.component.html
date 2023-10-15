@@ -1,19 +1,20 @@
 <menu>
     <a routerLink="/"><img class="logo" src="/assets/img/personal-logo.png" alt="Logo"></a>
 
-
     <div class="menu-links">
-        <a class="menu-point" routerLink="">About me</a>
-        <a class="menu-point" routerLink="">Skills</a>
-        <a class="menu-point" routerLink="">My Work</a>
+        <a class="menu-point" href="#about">About me</a>
+        <a class="menu-point" href="#skills">Skills</a>
+        <a class="menu-point" href="#my-work">My Work</a>
+        <a class="menu-point" href="#contact-me">Contact</a>
     </div>
 
 
     <div [class.active]="showOverlay" class="menu-overlay">
         <img class=" logo logo-overlay" src="/assets/img/personal-logo.png" alt="Logo">
-        <a class="menu-point" routerLink="">About me</a>
-        <a class="menu-point" routerLink="">Skills</a>
-        <a class="menu-point" routerLink="">My Work</a>
+        <a class="menu-point" href="#about" (click)="toggleMenu()">About me</a>
+        <a class="menu-point" href="#skills" (click)="toggleMenu()">Skills</a>
+        <a class="menu-point" href="#my-work" (click)="toggleMenu()">My Work</a>
+        <a class="menu-point" href="#contact-me" (click)="toggleMenu()">Contact</a>
         <a href="https://github.com/Christoph1812"><img src="/assets/img/social-medioa-icons/github-blue.svg"
                 alt="Github"></a>
         <a href="mailto:kontakt@beispiel.com?subject=Anfrage%20f%C3%BCr%20Ihr%20Portfolio"><img
@@ -23,7 +24,7 @@
     </div>
 
 
-    <div class="burger-menu" (click)="openMenu()">
+    <div class="burger-menu" (click)="toggleMenu()">
         <div [class.active]="showOverlay" class="menu-line line1"></div>
         <div [class.active]="showOverlay" class="menu-line line2"></div>
         <div [class.active]="showOverlay" class="menu-line line3"></div>

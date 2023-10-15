@@ -21,27 +21,71 @@ export class ContactComponent implements OnInit {
     });
   }
 
+  // async sendMail() {
+  //   if (this.contactForm.valid){
+  //     const formData = new FormData();
+  //     const notification = document.getElementById("notification")
+  //     formData.append('name', this.contactForm.get('name')!.value);
+  //     formData.append('email', this.contactForm.get('email')!.value);
+  //     formData.append('message', this.contactForm.get('message')!.value);
+
+  //   await fetch('https://christoph-haase.developerakademie.net/send_mail/send_mail.php', {
+  //     method: 'POST',
+  //     body: formData
+  //   });
+  //     notification.style.display = "block";
+  //     setTimeout(function() {
+  //     notification.style.display = "none";
+  //   }, 10000);
+  //     this.contactForm.reset();
+  //   } else {
+
+  //     this.contactForm.markAllAsTouched();
+  //   }
+  // }
+
   async sendMail() {
-    if (this.contactForm.valid){
+    if (this.contactForm.valid) {
       const formData = new FormData();
       formData.append('name', this.contactForm.get('name')!.value);
       formData.append('email', this.contactForm.get('email')!.value);
       formData.append('message', this.contactForm.get('message')!.value);
 
-
-    // Server-Anfrage senden
-    await fetch('https://christoph-haase.developerakademie.net/send_mail/send_mail.php', {
-      method: 'POST',
-      body: formData
-    });
-     
-      alert('Nachricht wurde gesendet!');
-      this.contactForm.reset();
-    } else {
-      // Markiere die Formularfelder als berührt, um Fehlermeldungen anzuzeigen
-      this.contactForm.markAllAsTouched();
+      const response = await fetch('https://christoph-haase.developerakademie.net/send_mail/send_mail.php', {
+        method: 'POST',
+        body: formData
+      });
+      if (response.status === 200) {
+        this.showSucessMessage();
+      } else {
+        this.showErrorMessage();
+      }
     }
   }
+
+  showSucessMessage() {
+    const notification = document.getElementById("sucess-message") as HTMLElement;
+
+    notification.style.display = "block";
+    setTimeout(() => {
+      notification.style.display = "none";
+    }, 5000);
+
+    this.contactForm.reset();
+  }
+
+  showErrorMessage() {
+    const notification = document.getElementById("error-message") as HTMLElement;
+
+    notification.style.display = "block";
+    setTimeout(() => {
+      notification.style.display = "none";
+    }, 5000);
+
+    // this.contactForm.reset();
+  }
+
+
 }
 
 
@@ -52,38 +96,4 @@ export class ContactComponent implements OnInit {
 
 
 
-
-// @ViewChild('myForm') myForm!: ElementRef;
-// @ViewChild('nameField') nameField!: ElementRef;
-// @ViewChild('emailField') emailField!: ElementRef;
-// @ViewChild('messageField') messageField!: ElementRef;
-
-// async sendMail() {
-
-//   let nameField = this.nameField.nativeElement;
-//   let messageField = this.messageField.nativeElement;
-//   let emailField = this.emailField.nativeElement;
-//   let sendButton = this.myForm.nativeElement;
-//   nameField.disabled = true;
-//   emailField.disabled = true;
-//   messageField.disabled = true;
-//   sendButton.disabled = true;
-//   //Animation triggern
-
-//   let fd = new FormData();
-//   fd.append('name', nameField.value);
-//   fd.append('email', emailField.value);
-//   fd.append('message', messageField.value);
-
-  // senden
- 
-
-//   // Text anzeigen: Nachricht gesendet.
-//   nameField.disabled = false;
-//   emailField.disabled = false;
-//   messageField.disabled = false;
-//   sendButton.disabled = false;
-
-
-// }
 
