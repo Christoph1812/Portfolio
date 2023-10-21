@@ -9,13 +9,15 @@ $ligthBlue: rgb(89, 136, 255);
 
 * {
     scroll-behavior: smooth;
-    margin: 0;
-    padding: 0;
 }
+
+
 
 body {
     font-family: "Montserrat";
     font-weight: 400;
+    margin: 0;
+    padding: 0;
 
 }
 
@@ -64,10 +66,13 @@ h1 {
         border: none;
 
     }
+
+    &:disabled {
+        color: rgb(187, 187, 187);
+        border-color: rgb(187, 187, 187);
+        pointer-events: none; // Hier wird pointer-events auf "none" gesetzt, um den Hover-Effekt auf deaktivierten Buttons zu deaktivieren
+    }
 }
-
-
-
 
 
 body::-webkit-scrollbar {
@@ -75,7 +80,7 @@ body::-webkit-scrollbar {
 }
 
 body::-webkit-scrollbar-track {
-    background: linear-gradient(to bottom, #EAF0FF, white, #5988FF);
+    background: white;
 }
 
 body::-webkit-scrollbar-thumb {

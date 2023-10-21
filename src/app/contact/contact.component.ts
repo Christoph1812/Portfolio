@@ -6,6 +6,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
   templateUrl: './contact.component.html',
   styleUrls: ['./contact.component.scss']
 })
+
 export class ContactComponent implements OnInit {
   contactForm!: FormGroup;
 
@@ -20,29 +21,6 @@ export class ContactComponent implements OnInit {
       privacyPolicy: [false, Validators.requiredTrue]
     });
   }
-
-  // async sendMail() {
-  //   if (this.contactForm.valid){
-  //     const formData = new FormData();
-  //     const notification = document.getElementById("notification")
-  //     formData.append('name', this.contactForm.get('name')!.value);
-  //     formData.append('email', this.contactForm.get('email')!.value);
-  //     formData.append('message', this.contactForm.get('message')!.value);
-
-  //   await fetch('https://christoph-haase.developerakademie.net/send_mail/send_mail.php', {
-  //     method: 'POST',
-  //     body: formData
-  //   });
-  //     notification.style.display = "block";
-  //     setTimeout(function() {
-  //     notification.style.display = "none";
-  //   }, 10000);
-  //     this.contactForm.reset();
-  //   } else {
-
-  //     this.contactForm.markAllAsTouched();
-  //   }
-  // }
 
   async sendMail() {
     if (this.contactForm.valid) {
@@ -84,7 +62,6 @@ export class ContactComponent implements OnInit {
 
     // this.contactForm.reset();
   }
-
 
 }
 

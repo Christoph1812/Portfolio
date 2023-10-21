@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { MyWorkComponent } from './my-work.component';
+import { MyWorkComponent } from './MyWorkComponent';
 
 describe('MyWorkComponent', () => {
   let component: MyWorkComponent;

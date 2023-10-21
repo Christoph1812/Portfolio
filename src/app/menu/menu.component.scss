@@ -1,6 +1,7 @@
 menu {
     padding-left: 20px;
     padding-right: 20px;
+    margin: 0;
     position: absolute;
     left: 0;
     right: 0;
@@ -84,11 +85,10 @@ $menu-gap: 1rem; // Gap between the lines
     align-items: center;
     gap: 30px;
     opacity: 0;
-    transform: translateY(50px) scale(0.95); // Slightly move it down and scale it down
+    transform: translateY(50px) scale(0.95);
     transition: opacity 0.4s ease, visibility 0.4s ease, transform 0.4s ease;
     pointer-events: none;
     background-color: rgba(255, 255, 255, 0.9);
-
 
     &.active {
         opacity: 1;
@@ -134,15 +134,20 @@ $menu-gap: 1rem; // Gap between the lines
     transform: scaleX(1);
 }
 
-@media (min-width: 700px) {
+@media (min-width: 800px) {
     menu {
         padding: 0;
         margin: 0px 80px;
     }
 
+
+
+}
+
+@media(min-width: 1000px) {
     .menu-links {
         display: flex;
-        gap: 30px;
+        gap: 50px;
     }
 
 
@@ -150,11 +155,4 @@ $menu-gap: 1rem; // Gap between the lines
         display: none;
     }
 
-}
-
-@media(min-width: 1100px) {
-
-    .menu-links {
-        gap: 50px;
-    }
 }

@@ -10,13 +10,11 @@
     }
 }
 
-
 .about-me-content {
     padding-top: 300px;
     padding-bottom: 200px;
     margin-left: 20px;
     margin-right: 20px;
-
 }
 
 .headline {
@@ -24,24 +22,27 @@
         color: var(--headlineColor);
         font-size: 64px;
         line-height: 40px;
+        margin: 0;
         margin-bottom: 20px;
     }
 }
+
 
 .content {
     p {
         font-size: 23px;
         line-height: 27px;
+        margin: 0;
         margin-bottom: 20px;
     }
 }
+
 
 .button-container {
     display: flex;
     justify-content: center;
     height: 50px;
 }
-
 
 
 @media(min-width:1000px) {

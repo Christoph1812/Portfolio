@@ -3,24 +3,16 @@
         "title": "Join",
         "technologies": "JavaScript | HTML | CSS ",
         "description": "Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.",
-        "imagePath": "/assets/img/join.JPG"
+        "imagePath": "/assets/img/join.jpg",
+        "gitHub": "https://github.com/Christoph1812/Join",
+        "test": "https://christoph-haase.developerakademie.net/Join/index.html"
     },
     {
         "title": "Sharkie",
         "technologies": "JavaScript | HTML | CSS ",
         "description": "A 2D adventure game based on an object-oriented approach. Help Sharkie find coins and poison bottles to fight against the big whales.",
-        "imagePath": "/assets/img/join.JPG"
-    },
-    {
-        "title": "CRM",
-        "technologies": "Angular | TypeScript | HTML | CSS | Firebase ",
-        "description": "A very Simple Customer Relationship Managment system working with CRUD functionallity.",
-        "imagePath": "/assets/img/sharkie.JPG"
-    },
-    {
-        "title": "DaBubble",
-        "technologies": "Angular | TypeScript | HTML | CSS | Firebase ",
-        "description": "Chatclone",
-        "imagePath": "/assets/img/sharkie.JPG"
+        "imagePath": "/assets/img/sharkie.JPG",
+        "gitHub": "https://github.com/Christoph1812/Sharkie",
+        "test": "https://christoph-haase.developerakademie.net/Sharkie/index.html"
     }
 ]

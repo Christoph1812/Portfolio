@@ -3,9 +3,10 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 50px 0px;
+    padding: 100px 0px;
 
     h2 {
+        margin-top: 0px;
         color: white;
         font-size: 64px;
     }
@@ -16,8 +17,7 @@
         justify-content: center;
         gap: 70px;
         width: calc(100% - 40px);
-        margin-bottom: 50px;
-
+        padding-bottom: 50px;
 
         div {
             display: flex;
@@ -39,8 +39,6 @@
                 text-align: center;
             }
         }
-
-
     }
 }
 
@@ -60,18 +58,12 @@
                     width: 90px;
                     height: 90px;
                     object-fit: contain;
-
                 }
 
                 p {
                     font-size: 18px;
                 }
             }
-
-
         }
     }
-
-
-
 }

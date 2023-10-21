@@ -93,18 +93,20 @@
                         </ng-container>
                     </ng-container>
                 </ng-container>
-                <button type="submit" class="blue-button" [disabled]="contactForm.invalid" data-text="Say hello ;)">Say
-                    hello ;)</button>
+                <div class="button-container">
+                    <button type="submit" class="blue-button" [disabled]="contactForm.invalid"
+                        data-text="Say hello ;)">Say
+                        hello ;)</button>
+                </div>
+
             </form>
         </div>
-
     </div>
+
     <div id="sucess-message" class="hidden">
         Your message was sent successfully.
     </div>
     <div id="error-message" class="hidden">
         Your message could not be sent.
     </div>
-
-
 </div>
