@@ -15,7 +15,7 @@
                     <label class="placeholder"
                         [class.active]="contactForm.get('name')!.touched || contactForm.get('name')!.dirty">Your name
                     </label>
-                    <img class="check-icon" *ngIf="contactForm.controls['name'].valid" src="/assets/img/green-tick.svg"
+                    <img class="check-icon" *ngIf="contactForm.controls['name'].valid" src=",/assets/img/green-tick.svg"
                         alt="Tick">
 
                     <ng-container *ngIf="contactForm.controls['name'] as name">
@@ -28,7 +28,7 @@
                                     At least {{errors['minlength'].requiredLength}} letters should be entered.
                                 </p>
                                 <img class="check-icon" *ngIf="errors['required'] || errors['minlength']"
-                                    src="/assets/img/red-exclamation-mark.svg" alt="Exclamation Mark">
+                                    src="./assets/img/red-exclamation-mark.svg" alt="Exclamation Mark">
                             </ng-container>
                         </ng-container>
                     </ng-container>
@@ -38,8 +38,8 @@
                     <label class="placeholder"
                         [class.active]="contactForm.get('email')!.touched || contactForm.get('email')!.dirty">Your email
                     </label>
-                    <img class="check-icon" *ngIf="contactForm.controls['email'].valid" src="/assets/img/green-tick.svg"
-                        alt="Tick">
+                    <img class="check-icon" *ngIf="contactForm.controls['email'].valid"
+                        src="./assets/img/green-tick.svg" alt="Tick">
 
                     <ng-container *ngIf="contactForm.controls['email'] as email">
                         <ng-container *ngIf="email.dirty|| email.touched">
@@ -51,7 +51,7 @@
                                     This is not a valid email address.
                                 </p>
                                 <img class="check-icon" *ngIf="errors['email'] || errors['required']"
-                                    src="/assets/img/red-exclamation-mark.svg" alt="Exclamation Mark">
+                                    src="./assets/img/red-exclamation-mark.svg" alt="Exclamation Mark">
                             </ng-container>
                         </ng-container>
                     </ng-container>
@@ -63,7 +63,7 @@
                         message
                     </label>
                     <img class="check-icon" *ngIf="contactForm.controls['message'].valid"
-                        src="/assets/img/green-tick.svg" alt="Tick">
+                        src="./assets/img/green-tick.svg" alt="Tick">
                     <ng-container *ngIf="contactForm.controls['message'] as message">
                         <ng-container *ngIf="message.dirty|| message.touched">
                             <ng-container *ngIf="message.errors as errors">
@@ -71,7 +71,7 @@
                                     Your message is empty
                                 </p>
                                 <img class="check-icon" *ngIf=" errors['required']"
-                                    src="/assets/img/red-exclamation-mark.svg" alt="Exclamation Mark">
+                                    src="./assets/img/red-exclamation-mark.svg" alt="Exclamation Mark">
                             </ng-container>
                         </ng-container>
                     </ng-container>

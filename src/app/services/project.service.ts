@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class ProjectService {
-  public projectsUrl = '/assets/data/projects.json';
+  public projectsUrl = './assets/data/projects.json';
 
   constructor(private http: HttpClient) { }
 
