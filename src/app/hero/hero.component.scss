@@ -17,7 +17,6 @@
         width: 156px;
         z-index: 3;
     }
-
 }
 
 
@@ -26,19 +25,19 @@
     position: absolute;
     top: 0;
     left: 0;
+    right: 0;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    padding: 0 20px;
 
     .profile-image {
-        margin-left: 20px;
         height: 100vw;
         object-fit: contain;
     }
 
     .headline {
         margin-top: 125px;
-        margin-left: 20px;
         display: flex;
         flex-direction: column;
         height: 205px;
@@ -46,7 +45,6 @@
 
         p {
             margin: 0;
-            margin-bottom: 0px;
             font-size: 20px;
             color: white;
         }
@@ -55,17 +53,15 @@
             margin: 0;
             color: white;
             font-size: 60px;
-
         }
 
         h1:nth-child(3) {
             margin: 0;
             font-size: 55px;
-
         }
-
     }
 }
+
 
 .social-media {
     position: absolute;
@@ -75,7 +71,14 @@
     flex-direction: column;
     align-items: center;
     gap: 25px;
+
+    img:hover {
+        transform: translatex(-10px);
+    }
 }
+
+
+
 
 .scroll-down {
     display: none;
@@ -90,13 +93,14 @@
     }
 }
 
+
 @media(min-width: 500px) {
     .profile-image {
-        margin-left: 20px;
         height: 50vh;
         object-fit: contain;
     }
 }
+
 
 @media(min-width: 800px) {
     .hero-section {
@@ -108,24 +112,16 @@
         }
     }
 
-    .hero-section {
-        .bubble-1-position {
-            width: 700px;
-            height: 700px;
-            margin-left: -310px;
-            margin-top: -130px;
-        }
-    }
 
     .hero-container {
+        padding: 0 80px;
+
         .profile-image {
             margin-top: auto;
-            margin-left: 80px;
             height: 60vh;
         }
 
         .headline {
-            margin-left: 80px;
 
             p {
                 font-size: 20px;
@@ -139,7 +135,6 @@
 
             h1:nth-child(3) {
                 font-size: 58px;
-
             }
         }
     }
@@ -150,21 +145,18 @@
     }
 }
 
-@media(min-width: 1000px) {
 
+@media(min-width: 1000px) {
     .hero-container {
         flex-direction: row-reverse;
-        justify-content: space-between;
 
         .profile-image {
             height: 100%;
-            margin-left: 80px;
             height: 70vh;
             object-fit: contain;
         }
 
         .headline {
-            margin-left: -50px;
             line-height: 80px;
 
             p {
@@ -190,6 +182,7 @@
         display: flex;
     }
 }
+
 
 @media(min-width: 1400px) {
 
@@ -222,24 +215,11 @@
     }
 }
 
-@media(min-width: 1800px) {
 
+@media(min-width: 1600px) {
     .hero-container {
-        .headline {
-            margin-left: 300px;
-            line-height: 100px;
-
-            p {
-                font-size: 45px;
-            }
-
-            h1 {
-                font-size: 145px;
-            }
-
-            h1:nth-child(3) {
-                font-size: 130px;
-            }
-        }
+        width: calc(1600px - 160px); // padding abziehen
+        margin-left: auto;
+        margin-right: auto;
     }
 }

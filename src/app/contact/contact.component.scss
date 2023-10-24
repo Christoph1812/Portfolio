@@ -6,6 +6,46 @@
     padding-right: 20px;
 }
 
+.contact-container {
+    position: relative;
+}
+
+.scroll-up-container {
+    position: absolute;
+    bottom: -5px;
+    left: -50px;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+
+    .icon,
+    .icon-hover {
+        object-fit: cover;
+        position: absolute;
+        transition: opacity 0.3s;
+    }
+
+    .icon-hover {
+        opacity: 0;
+    }
+
+    &:hover {
+        .icon {
+            opacity: 0;
+        }
+
+        .icon-hover {
+            opacity: 1;
+        }
+    }
+}
+
+
+
+
 .contact-text {
     h2 {
         margin: 0px;
@@ -40,6 +80,7 @@
 
 }
 
+
 form {
     display: flex;
     flex-direction: column;
@@ -49,12 +90,14 @@ form {
     p {
         margin: 2px 0px 0px 20px;
     }
-
 }
 
+
 .input-container {
+    height: 50px;
     position: relative;
     width: 100%;
+    background-color: rgb(240, 238, 238);
 
     input {
         padding-left: 8px;
@@ -63,6 +106,7 @@ form {
         width: calc(100% - 12px);
         border: 1px solid var(--headlineColor);
         border-radius: 10px;
+        background-color: rgb(240, 238, 238);
 
         &:hover {
             border: 2px solid var(--headlineColor);
@@ -74,9 +118,11 @@ form {
     }
 }
 
+
 .textarea-container {
     position: relative;
     width: 100%;
+    height: 160px;
 
     textarea {
         outline: none;
@@ -88,6 +134,7 @@ form {
         border: 1px solid var(--headlineColor);
         border-radius: 10px;
         resize: none;
+        background-color: rgb(240, 238, 238);
 
         &:hover {
             border: 2px solid var(--headlineColor);
@@ -100,6 +147,7 @@ form {
     }
 }
 
+
 .placeholder {
     position: absolute;
     top: 20px;
@@ -108,6 +156,7 @@ form {
     transform: translateY(-50%);
     pointer-events: none;
     transition: all 0.3s ease-in-out;
+    background-color: rgb(240, 238, 238);
 }
 
 
@@ -115,8 +164,9 @@ form {
     top: 10px;
     left: 30px;
     transform: translateY(-100%) scale(0.8);
-    background-color: #fff;
+    background-color: rgb(240, 238, 238);
 }
+
 
 .check-icon {
     position: absolute;
@@ -124,12 +174,14 @@ form {
     right: 6px;
 }
 
+
 .error {
     position: absolute;
     top: 100%;
     margin-left: 20px;
     color: red;
 }
+
 
 .privacy-policy-container {
     margin: 0 20px;
@@ -174,17 +226,21 @@ form {
     z-index: 9999;
 }
 
+
 #sucess-message {
     background-color: #79e734;
 }
+
 
 #error-message {
     background-color: #E0173E;
 }
 
+
 .button-container {
     height: 50px;
 }
+
 
 @media(min-width:800px) {
     .contact-section {
@@ -192,6 +248,7 @@ form {
         padding-right: 80px;
     }
 }
+
 
 @media(min-width:1000px) {
     .contact-container {
@@ -207,5 +264,14 @@ form {
         .form-container {
             width: 50%;
         }
+    }
+}
+
+
+@media(min-width: 1600px) {
+    .contact-container {
+        width: calc(1600px - 160px); // padding abziehen
+        margin-left: auto;
+        margin-right: auto;
     }
 }

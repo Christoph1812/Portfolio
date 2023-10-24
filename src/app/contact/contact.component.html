@@ -1,5 +1,11 @@
 <div class="contact-section">
     <div class="contact-container">
+        <div class="scroll-up-container">
+            <a href="#hero">
+                <img src="./assets/img/Scroll-up-blue.svg" class="icon" alt="Icon 1">
+                <img src="./assets/img/Scroll-up-white.svg" class="icon-hover" alt="Icon 2">
+            </a>
+        </div>
         <div class="contact-text">
             <h2>Contact</h2>
             <p>Got a problem to solve?</p>
@@ -15,7 +21,7 @@
                     <label class="placeholder"
                         [class.active]="contactForm.get('name')!.touched || contactForm.get('name')!.dirty">Your name
                     </label>
-                    <img class="check-icon" *ngIf="contactForm.controls['name'].valid" src=",/assets/img/green-tick.svg"
+                    <img class="check-icon" *ngIf="contactForm.controls['name'].valid" src="./assets/img/green-tick.svg"
                         alt="Tick">
 
                     <ng-container *ngIf="contactForm.controls['name'] as name">
