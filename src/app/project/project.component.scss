@@ -80,8 +80,6 @@ img {
 
     .description-container {
         width: 40%;
-
-
     }
 
     .text-content {
@@ -90,6 +88,15 @@ img {
         .description {
             text-align: start;
         }
+    }
+
+    .my-work-button {
+        margin: 0;
+        display: block;
+    }
+
+    #live-button {
+        margin-right: 20px;
     }
 }
 
@@ -127,11 +134,7 @@ img {
         }
     }
 
-    .my-work-button {
-        margin: 0;
-        display: flex;
-        gap: 20px;
-    }
+
 
 
 }
